@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(255, 232, 255);
+}
+    .container{
+        padding: 40px;
+        background-color: rgb(211, 209, 209);
+        border-radius: 20px;
+        
+        box-shadow: 0px 0px 9px 9px rgb(67, 67, 68) inset;
+        
+    }

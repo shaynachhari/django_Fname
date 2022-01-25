@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}student{% endblock title %}
+
+{% block body %}
+<style>
+  body{
+    background-color: pink;
+  }
+  .myimg img{
+        height: 520px;
+        width: 1400px;
+        
+    }
+   .container h2{
+    font-size: 3rem;
+    width:500pxpx;
+    font-weight:bold;
+  }
+  
+</style>
+<div class="myimg">
+    <img src="/static/student1.jpg" alt="photo">
+</div>
+<div class="container my-5">
+    <form method='POST'>
+      {% csrf_token %}
+      <h2>Students Fill This Form</h2>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">name</label>
+            <input type="name" class="form-control" id="exampleFormControlInput1" name='name' placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Roll-no</label>
+            <input type="roll" class="form-control" id="exampleFormControlInput1" name='roll' placeholder="Enter roll no.">
+          </div>
+
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" name='email' placeholder="Enter name@example.com">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" name='password' placeholder="Enter password">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">phone no.</label>
+            <input type="phone" class="form-control" id="exampleFormControlInput1" name='phone' placeholder="Enter phone">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Gender</label>
+            <input type="gendar" class="form-control" id="exampleFormControlInput1" name='gender' placeholder="Enter Your gender">
+
+
+             
+            </div>
+
+          
+       <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Meassge</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name='meassge' rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}

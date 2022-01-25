@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}SingUp{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/singup.css">{% endblock head%}
+
+{% block body %}
+
+
+<div class="container my-5">
+
+    <form action="/createuser" method="post">
+
+
+        {% csrf_token %}
+        <div class="mb-3 row">
+            <label for="inputusername" class="col-sm-2 col-form-label">username</label>
+            <div class="col-sm-10">
+              <input type="username" class="form-control" id="inputPassword" name='username' placeholder='Enter username'>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="inputusername" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="username" class="form-control" id="inputPassword" name='email' placeholder='Enter Email'>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputusername" class="col-sm-2 col-form-label">Firstname</label>
+            <div class="col-sm-10">
+              <input type="fname" class="form-control" id="inputPassword" name='fname' placeholder='Enter firstname'>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputusername" class="col-sm-2 col-form-label">Lastname</label>
+            <div class="col-sm-10">
+              <input type="lname" class="form-control" id="inputPassword" name='lname' placeholder='Enter lastname'>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputusername" class="col-sm-2 col-form-label">password</label>
+            <div class="col-sm-10">
+              <input type="username" class="form-control" id="inputPassword" name='password' placeholder='Enter password'>
+            </div>
+          </div>
+          
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Confirm password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword" name='re_password' placeholder='Enter confirmpassword'>
+            </div>
+          </div>
+
+            <button class="btn btn-primary" type="submit">singUp</button>
+            
+
+    </form>
+</div>
+{% endblock %}

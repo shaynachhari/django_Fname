@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}contact{% endblock title %}
+
+
+
+
+
+{% block body %}
+
+<style>
+    .myimg img {
+        height: 500px;
+        width: 118em;
+
+    }
+
+    .container h1 {
+        margin: auto;
+        width: 300px;
+
+        font-weight: bold;
+    }
+</style>
+<div class="myimg">
+    <img src="/static/contact.jpg" alt="photo">
+</div>
+<div class="container my-4">
+    <form method = 'POST'>
+        {% csrf_token %}
+        <h1>contact Us</h1>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name='name'
+                placeholder="Enter your name" require>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
+                placeholder="Enter your email" require>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Phone no.</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" name="phone"
+                placeholder="Enter your phone no." require>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Meassge</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="meassge" rows="3"></textarea>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputusername" class="col-sm-2 col-form-label">username</label>
+            <div class="col-sm-10">
+              <input type="username" class="form-control" id="inputPassword" name='username' placeholder='Enter username'>
+            </div>
+          </div>
+
+
+
+    </form>
+</div>
+{% endblock body %}
