@@ -5,7 +5,7 @@ from .import views
 app_name = 'hy'
 urlpatterns = [
     path('', views.index, name='index'),
-    path('student/', views.stu, name='student'),
+    # path('student/', views.stu, name='student'),
     path('about/', views.about, name='about'),
     path('contactus/', views.contactus, name='contactus'),
     path('some/', views.some, name='some'),

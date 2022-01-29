@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse
 from hy.models import Contact
-from hy.models import Student
+# from hy.models import Student
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 
@@ -15,21 +15,21 @@ def index(request):
     return redirect('/login')
 
 
-def stu(request):
-    if request.method == 'POST':
-        name = request.POST['name']
-        roll = request.POST['roll']
-        email = request.POST['email']
-        password = request.POST['password']
-        phone = request.POST['phone']
-        gender = request.POST['gender']
-        meassge = request.POST['meassge']
+# def stu(request):
+#     if request.method == 'POST':
+#         name = request.POST['name']
+#         roll = request.POST['roll']
+#         email = request.POST['email']
+#         password = request.POST['password']
+#         phone = request.POST['phone']
+#         gender = request.POST['gender']
+#         meassge = request.POST['meassge']
 
-        stu = Student(name=name, roll=roll, email=email,
-                      password=password, phone=phone, gender=gender, meassge=meassge)
-        stu.save()
+#         stu = Student(name=name, roll=roll, email=email,
+#                       password=password, phone=phone, gender=gender, meassge=meassge)
+#         stu.save()
 
-    return render(request, 'student.html')
+#     return render(request, 'student.html')
 
 
 def about(request):
