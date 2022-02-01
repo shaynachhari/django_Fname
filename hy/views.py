@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, HttpResponse
 from hy.models import Contact
-# from hy.models import Student
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from hy.models import Student
 
 
 def some(request):
@@ -11,7 +11,9 @@ def some(request):
 
 def index(request):
     if request.user.is_authenticated:
-        return render(request, 'index.html')
+        students = Student.objects.all()
+        context = {"students": students}
+        return render(request, 'index.html', context)
     return redirect('/login')
 
 
